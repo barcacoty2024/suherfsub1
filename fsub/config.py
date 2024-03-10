@@ -15,14 +15,14 @@ RESTRICT = getenv("RESTRICT", True)
 
 BUTTON_ROW = int(getenv("BUTTON_ROW", 2))
 FORCE_SUB_ = {}
-FSUB_TOTAL = 1
+FSUB_TOTAL = 2
 while True:
     key = f"FORCE_SUB_{FSUB_TOTAL}"
     value = getenv(key)
     if value is None:
         break
     FORCE_SUB_[FSUB_TOTAL] = int(value)
-    FSUB_TOTAL += 1
+    FSUB_TOTAL += 2
 
 START_MESSAGE = getenv(
     "START_MESSAGE",
